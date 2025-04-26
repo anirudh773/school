@@ -5,6 +5,7 @@ import {
   Users, BookOpen, Award, MapPin, Phone, Menu, 
   X, Calendar, Clock, Sparkles, Heart
 } from 'lucide-react';
+import logo from '../public/logo.png';
 
 const SchoolWebsite = () => {
   // Mobile navigation state
@@ -117,7 +118,11 @@ const SchoolWebsite = () => {
             {/* Logo and School Name */}
             <div className="flex items-center gap-3">
               <div className="relative h-10 w-10 md:h-12 md:w-12 rounded-full bg-gradient-to-br from-red-600 to-red-800 overflow-hidden border-2 border-red-700 shadow-lg">
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg md:text-xl">ST</div>
+                <img 
+                  src={logo.src}
+                  alt="St. Thomas School Logo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
