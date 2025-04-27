@@ -1,11 +1,17 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { 
   Mail, MessageCircle, ChevronRight, Camera, 
   Users, BookOpen, Award, MapPin, Phone, Menu, 
   X, Calendar, Clock, Sparkles, Heart
 } from 'lucide-react';
 import logo from '../public/logo.png';
+import stmskk from '../public/stmskk.jpeg';
+import photo1 from '../public/photo1.jpeg';
+import photo2 from '../public/photo2.jpeg';
+import photo3 from '../public/photo3.jpeg';
+import photo5 from '../public/photo5.jpeg';
 
 const SchoolWebsite = () => {
   // Mobile navigation state
@@ -201,7 +207,7 @@ const SchoolWebsite = () => {
               bg: "bg-gradient-to-br from-blue-900 to-indigo-900",
               title: "Welcome to St. Thomas School",
               subtitle: "Nurturing minds, building character, shaping futures",
-              image: "/stmskk.jpeg"
+              image: "/photo3.jpeg"
             },
             { 
               bg: "bg-gradient-to-br from-red-900 to-purple-900",
@@ -213,7 +219,7 @@ const SchoolWebsite = () => {
               bg: "bg-gradient-to-br from-green-900 to-teal-900",
               title: "Join Our Community",
               subtitle: "Where every student receives personal attention and care",
-              image: "/photo5.jpeg"
+              // image: "/photo5.jpeg"
             }
           ].map((slide, index) => (
             <div 
@@ -322,13 +328,14 @@ const SchoolWebsite = () => {
         <section id="about" className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
-              <div className="w-full lg:w-1/2">
-                <div className="relative">
-                  <div className="bg-gradient-to-br from-red-500 to-red-700 rounded-lg h-80 md:h-96 w-full"></div>
-                  <div className="absolute -top-6 -right-6 h-80 md:h-96 w-full border-4 border-red-600 rounded-lg"></div>
-                  <div className="absolute top-0 left-0 h-80 md:h-96 w-full overflow-hidden rounded-lg shadow-xl">
-                    <div className="bg-[url('/api/placeholder/800/600')] bg-cover bg-center h-full w-full transform hover:scale-105 transition-transform duration-500"></div>
-                  </div>
+            <div className="w-full lg:w-1/2">
+                <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-xl">
+                  <Image
+                    src={stmskk.src}// Replace with your actual image path
+                    alt="Highlight Image"
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
               </div>
               <div className="w-full lg:w-1/2 space-y-6">
@@ -470,12 +477,12 @@ const SchoolWebsite = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {[
                 {
-                  image: "/photo1.jpeg",
+                  image: "/photo3.jpeg",
                   title: "Classroom Learning",
                   description: "Interactive sessions and modern teaching methods"
                 },
                 {
-                  image: "/stmskk.jpeg",
+                  image: "/photo2.jpeg",
                   title: "Sports Activities",
                   description: "Physical education and team sports"
                 },
@@ -558,17 +565,12 @@ const SchoolWebsite = () => {
                       {
                         title: "School Ranked #1 in District",
                         date: "April 20, 2025",
-                        excerpt: "St. Thomas School has been ranked as the top educational institution in the district for the third consecutive year."
+                        excerpt: "The achievement of winning three gold medals in the SOF Maths Olympiad on 22-04-25 is a testament to the students' hard work and the school's commitment to nurturing mathematical talent."
                       },
                       {
                         title: "Annual Cultural Fest Announced",
                         date: "April 15, 2025",
-                        excerpt: "The much-awaited cultural festival 'Expressions 2025' will be held from June 15-17. Student registrations now open."
-                      },
-                      {
-                        title: "New STEM Lab Inaugurated",
-                        date: "April 5, 2025",
-                        excerpt: "A state-of-the-art STEM laboratory was inaugurated to enhance practical learning opportunities for students."
+                        excerpt: "The much-awaited cultural festival 'Expressions 2025' will be held in Dec."
                       }
                     ].map((news, index) => (
                       <div key={index} className={index !== 0 ? "pt-4 border-t border-gray-200" : ""}>
